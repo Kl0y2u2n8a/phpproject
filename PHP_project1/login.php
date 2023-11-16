@@ -30,10 +30,10 @@
     <div class="container">
         <ul  class="loginset">
             <h1>Please login here</h1><br>
-            <li><textarea id="logusername" rows="1" cols="20" placeholder="Username..."></textarea></li><br>
-            <li><textarea id="logpass" rows="1" cols="20"placeholder="Password..."></textarea></li><br>
+            <li><textarea id="logusername" rows="1" cols="20" required placeholder="Username..."></textarea></li><br>
+            <li><textarea id="logpass" rows="1" cols="20" required placeholder="Password..."></textarea></li><br>
             <li><button class="btn btn-primary btn-lg">Login</button></li><br>
-            <li><h6>If you do not have account, please sign up <a href="signup.php">here</a></h6></li>
+            <li><p>If you do not have account, please sign up <a href="signup.php">here</a></p></li>
         </ul>
     </div>
 

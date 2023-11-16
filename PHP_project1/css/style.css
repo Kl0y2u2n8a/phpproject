@@ -32,6 +32,10 @@
     background-color: #04AA6D;
   }
 
+  textarea {
+    resize: none;
+  }
+
   div.container {
     text-align: center;
   }
