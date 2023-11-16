@@ -1,9 +1,11 @@
   body {
     background-color: beige;
     color: #333;
+    text-align: center;
+    font-family: cursive;
   }
-
-  ul.mynavbar {
+/* nav bar css */
+  ul.myNavbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,16 +17,15 @@
     float: left;
   }
   
-  .bartext {
+  .barText {
     display: block;
     color: rgba(255, 255, 255, 0.801);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-
   
-  .bartext:hover:not(.active) {
+  .barText:hover:not(.active) {
     background-color: #111;
   }
   
@@ -32,36 +33,27 @@
     background-color: #04AA6D;
   }
 
+/* text css */
   .ref {
     font-size: xx-small;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
   }
 
-  textarea {
-    resize: none;
-    border: black solid 1.5px;
-    border-radius: 0.67em;
-
-  }
-
-  .content {
-    text-align: center;
+/* div container css */
+  div.container {
+    display: block;
+    justify-content: center;
     margin-top: 5%;
   }
 
-  div.container {
+/* sign up user input css */
+  .userInput{
+    display:flexbox;
+    border: black 1.5px solid;
+    margin-top: 5px;
+    border-radius: 0.67em;
     text-align: center;
-  }
-
-  ul.loginset {
-    list-style-type: none;
-    position: fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    line-height: 1.5;
   }
 
 
