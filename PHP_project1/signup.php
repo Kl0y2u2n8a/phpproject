@@ -14,16 +14,9 @@
     <title>Sign up</title>
 </head>
 
-<body>
-
-    <div>
-        <ul class="mynavbar">
-            <li class="nav"><a href="index.php"><img src="img/logo.png" alt="logo" width="50" height="50"></a></li>
-            <li class="nav"> <a href="index.php" class="bartext">Home</a></li>
-            <li class="nav"><a href="signup.php" class="bartext">Sign up</a></li>
-            <li class="nav"><a href="login.php" class="bartext">Log in</a></li>
-        </ul>    
-    </div>
+<?php
+    include_once 'header.php';
+?>
 
     
     <div class="container">
@@ -34,15 +27,11 @@
             <li><textarea id="signusername" rows="1" cols="20" required placeholder="Username..."></textarea></li><br>
             <li><textarea id="signpassword" rows="1" cols="20" required placeholder="Password..."></textarea></li><br>
             <li><textarea id="reppassword" rows="1" cols="20" required placeholder="Repeat Password..."></textarea></li><br>
-            <li><button class="btn btn-primary btn-lg">Sign Up</button></li><br>
+            <li><button class="btn btn-primary btn-lg">Sign Up</button></li>
             <li><p>If you already have an account, please login <a href="login.php">here</a></p></li>
         </ul>
     </div>
 
-
-    <!-- For using Bootstrap in jquery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php
+    include_once 'footer.php';
+?>
