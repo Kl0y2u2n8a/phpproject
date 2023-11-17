@@ -57,6 +57,7 @@
 
     function createUser($conn, $name, $email, $username, $password){
         $sql= "INSERT INTO users (usersName, usersEmail, usersUsername, usersPassword) VALUES (?, ?, ?, ?);";
+
         // statement
         $stmt = mysqli_stmt_init($conn);
         // if any error let user go back to sign up page
@@ -71,7 +72,10 @@
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
 
-        header('location: ../signup.php?error=none');
+        session_start();
+        $_SESSION['name'] = $name;
+
+        header('location: ../aftersignup.php');
         exit();
     }
 ?>

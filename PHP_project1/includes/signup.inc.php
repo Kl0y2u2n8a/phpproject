@@ -5,7 +5,6 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $rePassword = $_POST['rePassword'];
-        echo 'success';
 
         require_once 'dbh.inc.php';
         require_once 'functions.inc.php';

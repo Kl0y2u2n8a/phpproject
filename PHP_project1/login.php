@@ -3,8 +3,8 @@
 ?>
 <section>
     <div class="container">
-        <h2>Login to your account</h2>
-        <form action="includes/login.inc.php" method="$_POST">
+        <h2>Login to your account</h2><br />
+        <form action="includes/login.inc.php" method="post">
             <input type="text" class="userInput" name="logUsername" placeholder="Username..."><br />
             <input type="password" class="userInput" name="logPass" placeholder="Password..."><br /><br />
             <button type="submit" class="btn btn-primary">Login</button>

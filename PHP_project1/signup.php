@@ -13,7 +13,7 @@
             <input type="password" required class="userInput" name="rePassword" placeholder="Repeat Password..."><br /><br />
             <button type="submit" name="signBut" class="btn btn-primary">Sign up</button>
         </form>
-        <p>If you already have account, please log in <a href="login.php">here</a></p>
+        <p>If you already have account, please login <a href="login.php">here</a></p>
     </div>
 </section>
 
