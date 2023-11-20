@@ -15,7 +15,7 @@
         } 
 
         if(invalidUsername($username) !== false){
-            header('location: ../signup.php?error=invalidemail');
+            header('location: ../signup.php?error=invalidusername');
             exit();
         }
 

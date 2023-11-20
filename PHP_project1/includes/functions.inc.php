@@ -36,7 +36,7 @@
         $stmt = mysqli_stmt_init($conn);
         // if any error let user go back to sign up page
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header('location: ../signup.php?error=stmtfailed1');
+            header('location: ../signup.php?error=stmtfailed');
             exit();
         }
         // bind user inputs to statement
@@ -55,6 +55,7 @@
         mysqli_stmt_close($stmt);
     }
 
+    // create user account and add into database
     function createUser($conn, $name, $email, $username, $password){
         $sql= "INSERT INTO users (usersName, usersEmail, usersUsername, usersPassword) VALUES (?, ?, ?, ?);";
 
@@ -62,7 +63,7 @@
         $stmt = mysqli_stmt_init($conn);
         // if any error let user go back to sign up page
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header('location: ../signup.php?error=stmtfailed2');
+            header('location: ../signup.php?error=stmtfailed');
             exit();
         }
 
@@ -77,5 +78,40 @@
 
         header('location: ../aftersignup.php');
         exit();
+    }
+
+
+    // login
+    function emptyInputlogin($username, $password){
+        if(empty($username) || empty($password)){
+            return true;
+        }
+        return false;
+    }
+
+    function loginUser($conn, $username, $password){
+        // if data is in database, will return all data. Else, return false
+        $userExist = existUsername($conn, $username, $username);
+
+        if ($userExist === false) {
+            header("location: ../login.php?error=loginfailed");
+            exit();
+        }
+
+        $hasedPw = $userExist['usersPassword'];
+        $checkPw = password_verify($password, $hasedPw);
+
+        if($checkPw === false){
+            header("location: ../login.php?error=loginfailed");
+            exit();
+        }
+        else if($checkPw === true){
+            session_start();
+            $_SESSION["userId"] = $userExist["usersID"];
+            $_SESSION["userUsername"] = $userExist["usersUsername"];
+            $_SESSION["userName"] = $userExist["usersName"];
+            header("location: ../index.php");
+            exit();
+        }
     }
 ?>
