@@ -20,6 +20,23 @@
         echo "<th> Username </th>";
         echo "<td>".$_SESSION['userUsername']."</td>";
         echo "</tr>";
+        echo "<th> Password </th>";
+        echo "<td>*****</td>";
+        echo "</tr>";
+        echo "</table><br>";
+    ?>
+    <form action="modify.php" method="post">
+        <button name='editBut' type='submit'>Edit</button>
+    </form>
+
+    <?php
+    }
+
+    if(isset($_GET["error"])){
+        if($_GET["error"] == "update"){
+            echo "<br>";
+            echo "<p style='color:green'>You have successfully update your password!</p>";
+        }
     }
     ?>
 </section>

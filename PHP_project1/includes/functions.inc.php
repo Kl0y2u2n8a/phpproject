@@ -111,8 +111,23 @@
             $_SESSION["userUsername"] = $userExist["usersUsername"];
             $_SESSION["userEmail"] = $userExist["usersEmail"];
             $_SESSION["userName"] = $userExist["usersName"];
+            $_SESSION["userPw"] = $userExist["usersPassword"];
+
             header("location: ../index.php");
             exit();
         }
+    }
+
+    // modify user profile
+    function emptyNewPw($oldPw, $newPw, $renewPw){
+        if(empty($oldPw) || empty($newPw) || empty($renewPw)){
+            return true;
+        }
+        return false;
+    }
+
+    function updateUserPw($conn, $username, $newPw){
+        header("location: ../myprofile.php?error=update");
+        exit();
     }
 ?>
