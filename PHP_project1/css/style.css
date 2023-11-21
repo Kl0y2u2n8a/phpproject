@@ -58,3 +58,16 @@
   }
 
 
+/* Profile table */
+.profile-table, th, td{
+  border-bottom: 1.5px solid #ddd;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  width: 50%;
+}
+
+tr:hover {background-color: #D6EEEE;}
+
+

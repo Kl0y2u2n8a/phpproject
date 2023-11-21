@@ -109,6 +109,7 @@
             session_start();
             $_SESSION["userId"] = $userExist["usersID"];
             $_SESSION["userUsername"] = $userExist["usersUsername"];
+            $_SESSION["userEmail"] = $userExist["usersEmail"];
             $_SESSION["userName"] = $userExist["usersName"];
             header("location: ../index.php");
             exit();

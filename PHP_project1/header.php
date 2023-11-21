@@ -23,13 +23,13 @@
 
 <body>
     <div>
-        <ul class="myNavbar">
+        <ul class="myNavbar"> 
             <li class="nav"><a href="index.php"><img src="img/logo.png" alt="logo" width="50" height="50"></a></li>
-            <li class="nav"> <a href="index.php" class="barText">Home</a></li>
+            <li class="nav"> <a href="index.php" class="barText">&#127968; Home</a></li>
             <?php 
             // if login then show profile and log out
                 if (isset($_SESSION["userId"])) {
-                    echo '<li class="nav"><a href="myprofile.php" class="barText">'. $_SESSION["userName"].'\'s Profile</a></li>';
+                    echo '<li class="nav"><a href="myprofile.php" class="barText">&#128100; '. $_SESSION["userName"].'\'s Profile</a></li>';
                     echo '<li class="nav"><a href="includes/logout.inc.php" class="barText">Log Out</a></li>';
                 }
                 else{
