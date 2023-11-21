@@ -30,11 +30,11 @@
             // if login then show profile and log out
                 if (isset($_SESSION["userId"])) {
                     echo '<li class="nav"><a href="myprofile.php" class="barText">&#128100; '. $_SESSION["userName"].'\'s Profile</a></li>';
-                    echo '<li class="nav"><a href="includes/logout.inc.php" class="barText">Log Out</a></li>';
+                    echo '<li class="nav" style="float:right"><a href="includes/logout.inc.php" class="barText">Log Out</a></li>';
                 }
                 else{
-                    echo '<li class="nav"><a href="signup.php" class="barText">Sign up</a></li>';
-                    echo '<li class="nav"><a href="login.php" class="barText">Log in</a></li>';
+                    echo '<li class="nav" style="float:right"><a href="login.php" class="barText">Log in</a></li>';
+                    echo '<li class="nav" style="float:right"><a href="signup.php" class="barText">Sign up</a></li>';
                 }
             ?>
         </ul>    
