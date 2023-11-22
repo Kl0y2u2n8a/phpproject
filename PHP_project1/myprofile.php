@@ -26,7 +26,7 @@
         echo "</table><br>";
     ?>
     <form action="modify.php" method="post">
-        <button name='editBut' type='submit'>Edit</button>
+        <button class="btn btn-secondary" name='editBut' type='submit'>Edit</button>
     </form>
 
     <?php

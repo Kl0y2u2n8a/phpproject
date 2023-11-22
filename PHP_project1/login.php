@@ -7,7 +7,7 @@
         <form action="includes/login.inc.php" method="post">
             <input type="text" class="userInput" name="logUsername" placeholder="Username/Email..."><br />
             <input type="password" class="userInput" name="logPass" placeholder="Password..."><br /><br />
-            <button type="submit" name="loginBut" class="btn btn-primary">Login</button>
+            <button type="submit" name="loginBut" class="btn btn-secondary">Login</button>
             <p>If you do not have account yet, please sign up <a href="signup.php">here</a></p>
         </form>
     </div>

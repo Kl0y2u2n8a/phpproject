@@ -126,7 +126,42 @@
         return false;
     }
 
-    function updateUserPw($conn, $username, $newPw){
+    function updateUserPw($conn, $username, $oldPw, $newPw, $renewPw){
+        $userExist = existUsername($conn, $username, $username);
+
+        if ($userExist === false) {
+            header("location: ../modify.php?error=loginfailed");
+            exit();
+        }
+
+        $hasedPw = $userExist['usersPassword'];
+        $checkPw = password_verify($oldPw, $hasedPw);
+
+        if($checkPw === false){
+            header("location: ../modify.php?error=userPwUnmatch");
+            exit();
+        }
+        else if($checkPw === true){
+            $checkNewPw = matchPass($newPw,$renewPw);
+            if($checkNewPw === true){
+                header("location: ../modify.php?error=newPwUnmatch");
+                exit();
+            }
+            else{
+                $hashedNewPw = password_hash($newPw, PASSWORD_DEFAULT);;
+                $sql = "UPDATE users SET usersPassword=".$hashedNewPw." WHERE usersUsername=".$username;
+
+                if($conn->query($sql)=== true){
+                    header("location: ../myprofile.php?error=update");
+                    exit();
+                }else{
+                    header("location: ../modify.php?error=notupdate");
+                    exit();
+                }
+            }
+        }
+
+
         header("location: ../myprofile.php?error=update");
         exit();
     }

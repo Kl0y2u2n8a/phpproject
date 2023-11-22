@@ -12,10 +12,14 @@
 
         // if empty input return with error message
         if(emptyNewPw($oldPw, $newPw, $renewPw) !== false){
-            header('location: ../modify.php?error=emptyinput/'.$userUsername.'/'.$oldPw.'/'.$newPw.'/'.$renewPw);
+            header('location: ../modify.php?error=emptyinput');
             exit();
         }
         
-        updateUserPw($conn, $userUsername,$newPW);
+        updateUserPw($conn, $userUsername, $oldPw , $newPw, $renewPw);
+    }
+    else if(isset($_POST["modCancelBut"])){
+        header('location: ../myprofile.php');
+        exit();
     }
 ?>
