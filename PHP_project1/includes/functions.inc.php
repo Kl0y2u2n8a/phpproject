@@ -149,7 +149,7 @@
             }
             else{
                 $hashedNewPw = password_hash($newPw, PASSWORD_DEFAULT);;
-                $sql = "UPDATE users SET usersPassword=".$hashedNewPw." WHERE usersUsername=".$username;
+                $sql = "UPDATE users SET usersPassword='$hashedNewPw' WHERE usersUsername='$username'";
 
                 if($conn->query($sql)=== true){
                     header("location: ../myprofile.php?error=update");
