@@ -8,7 +8,7 @@ After that, you can use localhost to open the website(ex.http://localhost/phppro
 ![image](https://github.com/Kl0y2u2n8a/phpproject/assets/61998592/68f73b8b-6db4-438d-9f7d-6b71432e5aba)
 
 ->  Next, when you go to about us page, you can see what this website is doing and how you can keep going next.
- ![image](https://github.com/Kl0y2u2n8a/phpproject/assets/61998592/796c771c-444d-4adc-a929-92a5dc11d0e9)
+![image](https://github.com/Kl0y2u2n8a/phpproject/assets/61998592/05a740d7-9a21-4480-b895-57bb14c80f11)
 
 ->  You will see the sign up form for users to create their own accounts. After filling the form, all the data will be store to database.
 ![image](https://github.com/Kl0y2u2n8a/phpproject/assets/61998592/f8311096-9b6d-4f14-bfa8-540dbab835fb)
