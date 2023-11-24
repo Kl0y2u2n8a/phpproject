@@ -1,5 +1,8 @@
 # phpproject
 This is the project for Sign-in system written in PHP.
+If you want to play with this, you will first need to download XAMPP for connecting to apache and MySQL database.
+Then clone the code to your visual studio code or other IDE.
+After that, you can use localhost to open the website(ex.http://localhost/phpproject/php_project1/index.php).
 
 ->   This is my main page which giving the title and the instruction for user to know what to do next.
 ![image](https://github.com/Kl0y2u2n8a/phpproject/assets/61998592/68f73b8b-6db4-438d-9f7d-6b71432e5aba)
@@ -47,3 +50,7 @@ This is the project for Sign-in system written in PHP.
 -> If users change their password successfully, it will show the message as below image.
 ![image](https://github.com/Kl0y2u2n8a/phpproject/assets/61998592/42aa1ff2-a7ce-48b5-849b-036cc93c907d)
 
+-> When users finish what they want to do, they can click log out on the right top. Then, it will go back to the home page with sign out form.
+![image](https://github.com/Kl0y2u2n8a/phpproject/assets/61998592/b608dd97-7b8d-445a-9ff2-84d769e2f1bf)
+
+Thank you for reading my PHP project discribtion.
