@@ -1,4 +1,4 @@
-# phpproject
+# PHP Login System
 This is the project for Sign-in system written in PHP.
 If you want to play with this, you will first need to download XAMPP for connecting to apache and MySQL database.
 Then clone the code to your visual studio code or other IDE.
